@@ -1,4 +1,4 @@
-#include "gesEtu.h"
+#include "gestEtu.h"
 
 int main()
 {

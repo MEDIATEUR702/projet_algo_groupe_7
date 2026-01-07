@@ -1,4 +1,4 @@
-#include "gesEtu.h"
+#include "gestEtu.h"
 
 void enregistrerEtudiant(Etudiant etudiants[], int index)
 {
