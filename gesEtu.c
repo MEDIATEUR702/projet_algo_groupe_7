@@ -1,4 +1,4 @@
-#include "bibliotheque.h"
+#include "gesEtu.h"
 
 void enregistrerEtudiant(Etudiant etudiants[], int index)
 {
