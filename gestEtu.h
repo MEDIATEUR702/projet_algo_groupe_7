@@ -24,7 +24,9 @@ typedef struct {
 /* Prototypes des fonctions */
 void enregistrerEtudiant(Etudiant etudiants[], int index);
 void afficherEtudiants(Etudiant etudiants[], int n);
-
+void trierParNom(Etudiant etudiants[], int n);
+int comparerParFiliere(const void *a, const void *b);
+int comparerParNom(const void *a, const void *b);
 
 #endif
 
