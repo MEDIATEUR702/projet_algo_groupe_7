@@ -18,10 +18,8 @@ typedef struct {
 /* Prototypes des fonctions */
 void enregistrerEtudiant(Etudiant etudiants[], int index);
 void afficherEtudiants(Etudiant etudiants[], int n);
-int calculerAge(Etudiant e);
 void modifierEtudiant(Etudiant *e);
-void empty_buffer(void);
-
+int calculerAge(Etudiant e)
 #endif
 
 

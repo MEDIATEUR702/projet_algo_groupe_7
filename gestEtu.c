@@ -60,32 +60,6 @@ void afficherEtudiants(Etudiant etudiants[], int n)
 }
 
 
-int calculerAge(Etudiant e) {
-    int jour_naiss, mois_naiss, annee_naiss;
-    
-    // Extraction sécurisée des données de la chaîne "jj/mm/aaaa"
-    if (sscanf(e.date_naissance, "%d/%d/%d", &jour_naiss, &mois_naiss, &annee_naiss) != 3) {
-        return -1; // Erreur de format
-    }
-
-    // Récupération de la date système
-    time_t t = time(NULL);
-    struct tm *now = localtime(&t);
-
-    int annee_actuelle = now->tm_year + 1900; 
-
-    int age = annee_actuelle - annee_naiss;
-
-    return age;
-}
-
-
-//Nettoyage du buffer
-void empty_buffer(void) {
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF);
-}
-
 void modifierEtudiant(Etudiant *e) {
     int choix;
     char temp[100];
@@ -153,4 +127,33 @@ void modifierEtudiant(Etudiant *e) {
                 printf("Option invalide.\n");
         }
     } while (choix != 0);
+}
+
+
+//Nettoyage du buffer
+void empty_buffer(void) {
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
+
+
+int calculerAge(Etudiant e) {
+    int jour_naiss, mois_naiss, annee_naiss;
+    
+    // Extraction sécurisée des données de la chaîne "jj/mm/aaaa"
+    if (sscanf(e.date_naissance, "%d/%d/%d", &jour_naiss, &mois_naiss, &annee_naiss) != 3) {
+        return -1; // Erreur de format
+    }
+
+    // Récupération de la date système
+    time_t t = time(NULL);
+    struct tm *now = localtime(&t);
+
+    int annee_actuelle = now->tm_year + 1900; 
+
+    int age = annee_actuelle - annee_naiss;
+
+    return age;
+
+
 }
